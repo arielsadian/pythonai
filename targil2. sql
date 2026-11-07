@@ -1,0 +1,29 @@
+DROP TABLE IF EXISTS PETS;
+CREATE TABLE PETS(
+id INTEGER PRIMARY KEY ,
+name TEXT NOT NULL ,
+type TEXT ,
+age INTEGER
+);
+
+INSERT INTO PETS (id, name, type ,age) VALUES
+(1,'rex','dog',3),
+(2,'milo','cat',5),
+(3,'coco','parrot',1),
+(4,'luna','cat',2);
+
+SELECT *FROM PETS;
+
+UPDATE PETS
+SET AGE = 4
+WHERE name = 'rex';
+
+SELECT  *FROM PETS 
+WHERE type = 'cat';
+
+DELETE FROM PETS
+WHERE name = 'coco';
+
+UPDATE PETS 
+SET age = age + 1;
+SELECT * FROM PETS; 
